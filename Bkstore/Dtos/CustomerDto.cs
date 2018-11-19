@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Bkstore.Models;
 
-namespace Bkstore.Models
+namespace Bkstore.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public int Id { get; set; }
 
@@ -19,10 +20,7 @@ namespace Bkstore.Models
 
         public bool IsSubscribedToNewsletter { get; set; }
 
-        public MembershipType MembershipType { get; set; }
-
         [Required]
-        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
     }
 }
